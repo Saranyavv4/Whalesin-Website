@@ -9,31 +9,38 @@
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 </head>
 <body>
     <!-- header section starts -->
-    <header class="header">
-        <a href="#"><img class="logo" src="techlogo.jpg" alt="" style="width: 250px; height: 65px;" ></a>
-        <div class="menu fas fa-bars" id="myButton"></div>
-        <nav class="navbar" id="myNav">
+
+    <div class="main-header">
+        <a href="#"><img class="logo" src="logo.jpg" alt=""></a>
+        <input id="menu-toggle" type="checkbox" onclick="checkMenu()"/>
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <div class="menu" id="menu-main">
             <a href="#">Home</a>
-            <a href="#about">About Us</a>
+            <a href="/about.html">About Us</a>
             <a href="#services">Services</a>
-            <a href="#contact">Contact Us</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#career">Career</a>
-        </nav>
-    </header>
+            <a href="/contact.html">Contact Us</a>
+            <a href="/portfolio.html">Portfolio</a>
+            <a href="/career.html">Careers</a>
+        </div>
+    </div>
      <!-- header section ends -->
 
     <!-- home section starts -->
-    <section class="home" id="home">
-        <h4>We Create Leading Digital Products</h4>
-        <h1>End-To-End Development</h1>
-        <p>We are 100+ professional software engineers with more than 10 years of experience in delivering superior products.</p>
-        <a href="#" class="btn">Learn More</a>
-    </section>
+    <section class="home-cover" id="home"></section>
+    <div class="home">
+        <h4 class="slide-left">We Create Leading Digital Products</h4>
+        <h1 class="slide-left">End-To-End Development</h1>
+        <p class="slide-left">We are 100+ professional software engineers with more than 10 years of experience in delivering superior products.</p>
+        <a href="/web.html" class="btn">Learn More</a>
+    </div>
     <!-- home section ends -->
+    <section></section>
     <!-- about section starts -->
     <section class="home-info" id="home-info">
         <div class="box-container">
@@ -54,29 +61,11 @@
             </div>
         </div>
     </section>
-    <section class="about" id="about">
-        <div class="box-container">
-            <div class="box">
-                <h1 class="heading">About Us</h1>
-                <p>
-                    Whalesin Technologies is your solution-providing partner who is dignified and privileged to support you in your business operational needs. We are here to support you to turn your company and its operations into one of the best in the sector of your operations and transform the functioning of your company to higher levels. Moreover, we are a passionate team of professionals who are willing to provide our expertise for your development.
-                 </p>
-                 <p>
-                    We offer web development on various platforms as per your need, further we offer mobile application development in both Android as well as iOS platforms. Additionally, we are here to design and develop your websites as well as web apps for your operational needs. Furthermore, we understand your need to project and promote your company therefore, we will define your digital marketing strategies to put you first in the market, thereby improving your customer base.
-                </p>
-
-            </div>
-            <div class="box">
-                <div class="image1">
-                    <img src="about.webp" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- about section ends -->
+    <section></section>
     <!-- works section starts -->
     <section class="works" id="works">
-        <h1 class="heading">Working Process</h1>
+        <h1 class="heading">How It Works</h1>
         <div class="box-container">
             <div class="box">
                 <img src="product.png" alt="" style="width: 50px; height: 40px;" >
@@ -114,39 +103,40 @@
             
      </section>
     <!-- works section ends -->
+    <section></section>
      <!-- service section starts -->
     <section class="services" id="services">
-        <h1 class="heading">Providing IT Services</h1>
+        <h1 class="heading">We Offer a Wide <br> Variety of IT Services</h1>
         <div class="box-container">
-            <div class="box">
+            <div class="box" onclick="goTo('web')">
                 <img src="web.png" alt="" style="width: 50px; height: 50px;">
                 <h3>Web Development</h3>
                 <p>
                     We offer website development services along with web applications as per your desired requirements.
                 </p>
             </div>
-            <div class="box">
+            <div class="box" onclick="goTo('mobile')">
                 <img src="mobile.png" alt="" style="width: 65px; height: 50px;">
                 <h3>Mobile App Development</h3>
                 <p>
                     Our mobile app development services will offer you applications on Android as well as iOS platforms.
                 </p>
             </div>
-            <div class="box">
+            <div class="box" onclick="goTo('webdesign')">
                 <img src="design.png" alt="" style="width: 50px; height: 50px;">
                 <h3>Web Designing</h3>
                 <p>
                     Our web design services will offer you attractive website design which is eye-catching as well as attractive one.             
                 </p>
             </div>
-            <div class="box">
+            <div class="box" onclick="goTo('digital')">
                 <img src="digital.png" alt="" style="width: 50px; height: 50px;">
                 <h3>Digital Marketing</h3>
                 <p>
                     Digital Marketing is vital in this era and we offer dedicated marketing services which are customer-oriented and based on your target audience.
                 </p>
             </div>
-            <div class="box">
+            <div class="box" onclick="goTo('digital')">
                 <img src="brand.png" alt="" style="width: 50px; height: 50px;">
                 <h3>Branding</h3>
                 <p>
@@ -156,10 +146,11 @@
         </div>
     </section>
     <!-- service section ends -->
+    <section></section>
 
     <!-- Tech section starts -->
     <section class="techo" id="techo">
-        <h1 class="heading">We Use These Technologies</h1>
+        <h1 class="heading">Major Technologies We Use</h1>
         <div class="box-container">
             <div class="box">
                 <h3>Django</h3>
@@ -204,11 +195,9 @@
                 </div>
             </div>
         </div>
-
-
     </section>
-
-    <!-- Tech section ends -->
+       <!-- Tech section ends -->
+       <section></section>
     <section class="client" id="client">
         <h1 class="heading">Our Clients</h1>
         <div class="box-container">
@@ -236,49 +225,66 @@
             </div>
         </div>
     </section>
-    <!-- contact section starts -->
-    <section class="contact" id="contact">
-        <h1 class="heading">Contact Us</h1>
-        <div class="box-container">
-            <div class="box">
-                <h3>Address</h3>
-                <p>Calicut, Kerala.</p>
-                <h3>Email</h3>
-                <p>info@whalesin.com<p>
-                <h3>Phone No</h3>
-                <p>+91 97479 71323</p>
-                
-            </div>
-            <form>
-                <div class="inputBox">
-                    <input type="text" placeholder="Your Name">
-                    <input type="text" placeholder="Your Number">
+    <section></section>
 
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <img src="whitelogo.png" alt="" width="155px" height="50px">
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="/career.html">Careers</a></li>
+                    </ul>
                 </div>
-                <textarea name="" placeholder="Your Message" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Send Message" class="btn">
-            </form>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/web.html">Web Development</a></li>
+                        <li><a href="/mobile.html">Mobile App Development</a></li>
+                        <li><a href="/webdesign.html">Web Designing</a></li>
+                        <li><a href="/digital.html">Digital Marketing</a></li>
+                        <li><a href="/digital.html">Branding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <ul>
+                        <li><a href="#">Calicut, Kerala</a></li>
+                        <li><a href="mailto:info@Whalesin.com">info@whalesin.com</a></li>
+                        <li><a href="tel:+918129822622">+91 8129822622</a></li>
+                        <li><a href="tel:+919747971323">+91 9747971323</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/WhalesInGroup/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/WhalesIn_"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/whalesin_/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/whalesin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.behance.net/Whalesin"><i class="fa-brands fa-behance"></i></a>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
-    </section>
-    <!-- contact section ends -->
-
-    <!-- footer section starts -->
-    <section class="footer">
-        <a href="#"><img src="techlogo.jpg" alt="" style="width: 250px; height: 65px;" ></a>
-        <p>Full Cycle Software Development</p>
-        <div class="socials">
-            <ion-icon name="logo-twitter"></ion-icon>
-            <ion-icon name="logo-facebook"></ion-icon>
-            <ion-icon name="logo-instagram"></ion-icon>
-            <ion-icon name="logo-linkedin"></ion-icon>
-        </div>
-
-    </section>
-    <!-- footer section ends -->
+    </footer>
+    
+    <!-- footer section ends
 
 
 
-<!-- ion icons cdn -->
+    
+
+
+ <!-- ion icons cdn  -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
